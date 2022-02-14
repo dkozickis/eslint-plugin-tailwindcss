@@ -43,6 +43,9 @@ ruleTester.run("no-template-expression", rule, {
     {
       code: `<div class="flex shrink-0 flex-col">No arbitrary value</div>`,
     },
+    {
+      code: "<div class={\`flex shrink-0 flex-col ${HALA_AT_ME[size]}\`}>No arbitrary value</div>",
+    }
   ],
 
   invalid: [
